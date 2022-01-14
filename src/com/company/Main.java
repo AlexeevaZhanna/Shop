@@ -45,6 +45,8 @@ public class Main {
 
         Meat chikenWing = new Chiken("Куриные крылья");
         chikenWing.setDescription("Куриные крылья");
+        Product milk1= new Milk();
+        milk1.setDescription("Простоквашино");
 
 // write your code here
     }
