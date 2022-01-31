@@ -1,11 +1,33 @@
-package com.company.Product;
+package com.company.Products;
 
 public class Cheese extends Product {
    private String name;
   private   double size;
-   private int price;
-   private String shelfLife;
-   private int total;
+    private int price;
+    private String shelfLife;
+    private int total;
+
+
+    public void setPrice(int price) {
+        this.price = price;
+        if (price >= 200) {
+            System.out.println(price + " рублей");
+        } else {
+            System.out.println("Акция: " + price + " рублей");
+        }
+    }
+
+    public int getTotal() {
+        return total;
+    }
+        public void setTotal(int total) {
+        this.total = total;
+    }
+
+
+    public void setSize(double size) {
+        this.size = size;
+    }
 
     public Cheese(String name, double size, int price, String shelfLife, int total) {
         super(name);
@@ -16,30 +38,26 @@ public class Cheese extends Product {
         this.total = total;
     }
     public Cheese(String name){
-        super();
+        super(name);
+        this.name = name;
     }
+    public Cheese(){
+     super();
+    }
+    public String getName() {
+        return name;}
+
     public void setDescription(String name, String shelfLife) {
         this.name = name;
         this.shelfLife = shelfLife;
         System.out.println(name + " хранить в холодильнике до: " + shelfLife + "," + " готово к употреблению");
     }
-    public String getName() {
-        return name;
-    }
-    public void setSize() {
-        this.size = size;
-    }
+
+
     public String getShelfLife() {
         return shelfLife; }
 
-    public void setPrice() {               //if - else
-        this.price = price;
-        if (price >= 200) {
-            System.out.println(price + " рублей");
-        } else {
-            System.out.println("Акция: " + price + " рублей");
-        }
-        }
+
 
     public void cut() {
         System.out.println("Нарезaть: " + name);
@@ -47,4 +65,9 @@ public class Cheese extends Product {
     public void pack() {
         System.out.println("Упаковать в пленку: " + name);
            }
+
+    @Override
+    public void buy() {
+        System.out.println("Купить сыр");
+    }
 }

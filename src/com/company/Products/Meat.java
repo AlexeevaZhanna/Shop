@@ -1,7 +1,5 @@
-package com.company.Product;
+package com.company.Products;
 
-
-import com.company.Product.Product;
 
 public class Meat extends Product {
      private String name;
@@ -22,5 +20,10 @@ public class Meat extends Product {
     }
     public void pack() {
         System.out.println("Упаковать в пакет: " + name);
+    }
+
+    @Override
+    public void buy() {
+        System.out.println("Купить мясо");
     }
 }
