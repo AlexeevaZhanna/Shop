@@ -1,6 +1,6 @@
-package com.company.Product;
+package com.company.Products;
 
-public class Chiken extends Meat {
+public class Chicken extends Meat {
 
     private  String name;
    private  double size;
@@ -9,7 +9,7 @@ public class Chiken extends Meat {
    private int total;
     private Shop shop;
 
-    public Chiken(String name, double size, int price, String shelfLife, int total) {
+    public Chicken(String name, double size, int price, String shelfLife, int total) {
         super(name);
         this.name = name;
         this.size = size;
@@ -18,12 +18,12 @@ public class Chiken extends Meat {
         this.total = total;
     }
 
-    public  Chiken(String name){
+    public  Chicken(String name){
         super();
     }
-    public Chiken (){
+    public Chicken (){
     }
-    public Chiken(Shop shop){
+    public Chicken(Shop shop){
         this.shop = shop;
     }
     public String getName() {
@@ -67,5 +67,8 @@ public class Chiken extends Meat {
     }
 
 
-
+    @Override
+    public void buy() {
+        System.out.println("Купить курицу");
+    }
 }

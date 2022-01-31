@@ -1,6 +1,6 @@
-package com.company.Product;
+package com.company.Products;
 
-public abstract class Product {
+public abstract class Product implements Buy{
     private String name;
 
 
@@ -17,7 +17,7 @@ public abstract class Product {
         return name;
 
     }
-    public static int take (int p) {
+    public  int take (int p) {
         return p;
 
     }
@@ -35,8 +35,8 @@ public static int result(int z) {
         System.out.println("Описание");
     }
 
-
     public abstract void pack();
+
 
 
 }
