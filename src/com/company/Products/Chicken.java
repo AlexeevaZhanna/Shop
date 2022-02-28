@@ -71,4 +71,5 @@ public class Chicken extends Meat {
     public void buy() {
         System.out.println("Купить курицу");
     }
+
 }

@@ -1,13 +1,12 @@
 package com.company.Products;
 
-import com.company.Basket;
-
 import java.util.Collection;
 
 public class MyBasket implements Basket {
 
 
     Chicken chicken = new Chicken("Петелинка", 0.850, 200, "31.12.2021", 20);
+
 
     public void chicken() {
         int count = chicken.take(1);
@@ -51,19 +50,41 @@ public class MyBasket implements Basket {
     }
 
 
-
     Collection<Product> myAllProducts = Basket.getCollectionProducts();
 
-    public void myBasket(){
+    public void myBasket() {
 
-       myAllProducts.add(chicken);
-       myAllProducts.add(maasdam);
-       myAllProducts.add(new Meat("Говяжья вырезка"));
-       myAllProducts.add(new Cheese("Сырная нарезка"));
-       myAllProducts.add(new Cheese("Российский сыр"));
-       for (Product p : myAllProducts) {
-           System.out.println("В корзину добавлено:" + p.getName());
-       }
+        myAllProducts.add(chicken);
+        myAllProducts.add(maasdam);
+        myAllProducts.add(new Meat("Говяжья вырезка"));
+        myAllProducts.add(new Cheese("Сырное ассорти"));
+        myAllProducts.add(new Cheese("Российский сыр"));
+        for (Product p : myAllProducts) {
+            System.out.println("В корзину добавлено:" + p.getName());
+        }
+    }
+
+    public boolean contains(String name) {
+        for (Product p : myAllProducts) {
+            if (p.getName().equals(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void searchInBasket(String name) {
+        System.out.println("Наличие в корзине: " + name + " " + contains(name));
+    }
 }
-   }
+
+
+
+
+
+
+
+
+
+
 

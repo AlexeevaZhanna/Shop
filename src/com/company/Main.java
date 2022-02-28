@@ -17,10 +17,10 @@ public class Main {
 
         // В классе Корзина создала коллекцию. Пример использования Интерфейса коллекций.
         // Добавила продукты в "моя корзина" MyBasket:
-MyBasket today = new MyBasket();
-       today.myBasket();
-// write your code here
-    }
+        MyBasket today = new MyBasket();
+        today.myBasket();
 
-
-}
+        today.searchInBasket("Конфеты"); //поиск конфет в корзине, их нет, a  сыр  есть :
+        today.searchInBasket("Маасдам");
+        today.searchInBasket("Колбаса");
+    }}

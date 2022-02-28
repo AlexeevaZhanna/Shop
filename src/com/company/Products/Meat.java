@@ -4,6 +4,10 @@ package com.company.Products;
 public class Meat extends Product {
      private String name;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Meat(String name) {
         super(name);
         this.name = name;
