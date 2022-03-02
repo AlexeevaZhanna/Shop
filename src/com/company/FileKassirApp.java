@@ -9,8 +9,8 @@ public class FileKassirApp {
     public static void main(String[] args)  {
 
         new File("Kassir.txt");
-        System.out.println("Записать данные или отобразить?");
-        System.out.println("1. Загрузить");
+        System.out.println("Ввести данные или отобразить?");
+        System.out.println("1. Ввести");
         System.out.println("2. Отобразить");
 
         Scanner sc = new Scanner(System.in);
@@ -25,7 +25,7 @@ public class FileKassirApp {
         }
     }
 
-    private static void dbWrite(Scanner sc) {
+    private static void dbWrite(Scanner sc) {    // запись объекта в файл Kassir.txt
         try (
                 FileWriter fw = new FileWriter("Kassir.txt" , true)) {
             fw.write("name:"+sc.next() + " ");
@@ -41,7 +41,7 @@ public class FileKassirApp {
 
         }
 
-   private static void dbRead () {
+   private static void dbRead () {  //чтение из файла Kassir.txt
 
        try (BufferedReader br = new BufferedReader(new FileReader("Kassir.txt"))) {
            String text;
