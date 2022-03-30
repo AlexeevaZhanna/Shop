@@ -38,7 +38,10 @@ public static int result(int z) {
     public abstract void pack();
 
 
+    @Override
+    public void buy() {
 
+    }
 }
 
 

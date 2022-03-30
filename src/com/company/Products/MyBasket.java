@@ -4,9 +4,9 @@ import java.util.Collection;
 
 public class MyBasket implements Basket {
 
-
+    Meat chickenWing = new Chicken("Куриные крылья");
     Chicken chicken = new Chicken("Петелинка", 0.850, 200, "31.12.2021", 20);
-
+    Cheese maasdam = new Cheese("Маасдам", 0.200, 250, "01.31.2021", 45);
 
     public void chicken() {
         int count = chicken.take(1);
@@ -32,9 +32,7 @@ public class MyBasket implements Basket {
 
         chicken.setPrice(); //в классе Chicken,цена >=300, иначе "акция", if - else
     }
-
-    Cheese maasdam = new Cheese("Маасдам", 0.200, 250, "01.31.2021", 45);
-
+    
     public void maasdam() {
         maasdam.setDescription("Маасдам", "01.31.2021");
 
@@ -43,12 +41,9 @@ public class MyBasket implements Basket {
         maasdam.setPrice(200); // в классе Cheese цена >= 200,иначе "Акция", if- else
     }
 
-    Meat chickenWing = new Chicken("Куриные крылья");
-
     public void chickenWing() {
         chickenWing.setDescription("Куриные крылья");
     }
-
 
     Collection<Product> myAllProducts = Basket.getCollectionProducts();
 

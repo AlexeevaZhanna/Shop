@@ -1,26 +1,27 @@
 package com.company;
 
 import com.company.Products.*;
-
-import java.util.Collection;
+import com.company.Shop.Address;
+import com.company.Shop.Name;
+import com.company.Shop.Shop;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Shop lenta = new Shop();
-        System.out.println(lenta.getName());
+    public static void main(String[] args) throws CloneNotSupportedException {
+
+        Shop lenta = new Shop(new Name("Лента.Москва"), new Address("Москва, улица, дом"), "8-24");
+        System.out.println(lenta);
+
+         Shop lentaEkb = lenta.clone();             // клонирование, создание однотипных магазинов
+         lentaEkb.setNameShop("Лента.Екатеринбург");
+         lentaEkb.setAddress("Екатеринбург, улица, дом");
+        System.out.println(lentaEkb);
+
         lenta.setWork();
-
-        Chicken all = new Chicken(lenta);
-        all.free();
-
-
-        // В классе Корзина создала коллекцию. Пример использования Интерфейса коллекций.
-        // Добавила продукты в "моя корзина" MyBasket:
         MyBasket today = new MyBasket();
         today.myBasket();
 
-        today.searchInBasket("Конфеты"); //поиск конфет в корзине, их нет, a  сыр  есть :
+        today.searchInBasket("Конфеты");
         today.searchInBasket("Маасдам");
         today.searchInBasket("Колбаса");
     }}

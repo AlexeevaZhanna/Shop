@@ -35,8 +35,7 @@ public class FileKassirApp {
     }
 
     private static void dbWrite(Scanner sc) {    // запись объекта в файл Kassir.txt
-        try (
-                FileWriter fw = new FileWriter("Kassir.txt", true)) {
+        try (FileWriter fw = new FileWriter("Kassir.txt", true)) {
             fw.write("name:" + sc.next() + " ");
             fw.write("age:" + sc.next() + " ");
             fw.write("number:" + sc.next() + " ");

@@ -1,13 +1,13 @@
 package com.company.Products;
 
+
 public class Chicken extends Meat {
 
     private  String name;
-   private  double size;
-   private int price;
-   private String shelfLife;
-   private int total;
-    private Shop shop;
+    private  double size;
+    private int price;
+    private String shelfLife;
+    private int total;
 
     public Chicken(String name, double size, int price, String shelfLife, int total) {
         super(name);
@@ -22,9 +22,6 @@ public class Chicken extends Meat {
         super();
     }
     public Chicken (){
-    }
-    public Chicken(Shop shop){
-        this.shop = shop;
     }
     public String getName() {
         return name;
@@ -52,18 +49,12 @@ public class Chicken extends Meat {
             System.out.println("Акция: " + price + " рублей");
         }
     }
-    public Shop getShop() {
-        return shop;}
 
     public void cut() {
         System.out.println("Нарезaть: " + name);
     }
     public void pack(int z) {
         System.out.println("Упаковать в пакет: " + name);
-    }
-    public void free(){
-        shop.setWork();
-        System.out.println("Товары доступны к покупке");
     }
 
 
