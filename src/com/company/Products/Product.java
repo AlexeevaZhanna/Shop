@@ -1,7 +1,16 @@
 package com.company.Products;
 
-public abstract class Product implements Buy{
+public abstract class Product {
     private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
 
     public Product(String name) {
@@ -9,14 +18,10 @@ public abstract class Product implements Buy{
         this.name = name;
     }
 
+
     public Product() {
     }
 
-    public String getName() {
-
-        return name;
-
-    }
     public  int take (int p) {
         return p;
 
@@ -38,10 +43,6 @@ public static int result(int z) {
     public abstract void pack();
 
 
-    @Override
-    public void buy() {
-
-    }
 }
 
 

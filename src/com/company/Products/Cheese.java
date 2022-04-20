@@ -1,12 +1,17 @@
 package com.company.Products;
 
-public class Cheese extends Product {
-   private String name;
-  private   double size;
+public class Cheese  extends Product {
+    private String name;
+    private   double size;
     private int price;
     private String shelfLife;
     private int total;
-
+    public String getName(String name) {
+        return name;
+    }
+    public void setName() {
+        this.name = name;
+    }
 
     public void setPrice(int price) {
         this.price = price;
@@ -44,8 +49,7 @@ public class Cheese extends Product {
     public Cheese(){
      super();
     }
-    public String getName() {
-        return name;}
+
 
     public void setDescription(String name, String shelfLife) {
         this.name = name;
@@ -66,8 +70,5 @@ public class Cheese extends Product {
         System.out.println("Упаковать в пленку: " + name);
            }
 
-    @Override
-    public void buy() {
-        System.out.println("Купить сыр");
-    }
+
 }
