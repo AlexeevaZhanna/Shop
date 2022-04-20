@@ -13,15 +13,22 @@ public class Main {
         System.out.println(lenta);
 
          Shop lentaEkb = lenta.clone();             // клонирование, создание однотипных магазинов
-         lentaEkb.setNameShop("Лента.Екатеринбург");
-         lentaEkb.setAddress("Екатеринбург, улица, дом");
+        lentaEkb.setNameShop("Лента.Екатеринбург");
+        lentaEkb.setAddress("Екатеринбург, улица, дом");
         System.out.println(lentaEkb);
-
         lenta.setWork();
-        MyBasket today = new MyBasket();
+
+
+        for (int i = 1; i < 20; i ++) {                                 //потоки покупки и отгрузки товаров работают
+            new BuyThread("Товар с номером: "+ i).start();       // параллельно друг другу
+
+        }
+
+
+       /* MyBasket today = new MyBasket();
         today.myBasket();
 
         today.searchInBasket("Конфеты");
         today.searchInBasket("Маасдам");
-        today.searchInBasket("Колбаса");
+        today.searchInBasket("Колбаса"); */
     }}
