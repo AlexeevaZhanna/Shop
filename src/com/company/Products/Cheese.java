@@ -6,6 +6,8 @@ public class Cheese  extends Product {
     private int price;
     private String shelfLife;
     private int total;
+
+
     public String getName(String name) {
         return name;
     }
@@ -50,7 +52,6 @@ public class Cheese  extends Product {
      super();
     }
 
-
     public void setDescription(String name, String shelfLife) {
         this.name = name;
         this.shelfLife = shelfLife;
@@ -70,5 +71,4 @@ public class Cheese  extends Product {
         System.out.println("Упаковать в пленку: " + name);
            }
 
-
-}
+    }

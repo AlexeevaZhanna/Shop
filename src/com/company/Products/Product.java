@@ -12,7 +12,6 @@ public abstract class Product {
     }
 
 
-
     public Product(String name) {
 
         this.name = name;
@@ -22,18 +21,10 @@ public abstract class Product {
     public Product() {
     }
 
-    public  int take (int p) {
+    public int take(int p) {
         return p;
 
     }
-
-    public static int put(int a) {
-        return a;
-    }
-
-public static int result(int z) {
-        return z;
-}
 
     public void setDescription(String name) {
         this.name = name;
@@ -42,7 +33,37 @@ public static int result(int z) {
 
     public abstract void pack();
 
+    private int counter = 0;
 
-}
+    public synchronized void get() {
+        while (counter < 1) {
+            System.out.println("Ожидается пополнение склада: " + name);
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+            counter--;
+            System.out.println("Продукт продан: " + name);
+            System.out.println("Товар " + name + " на складе: " + counter);
+            notifyAll();
+        }
+
+        public synchronized void put () {
+            while (counter >= 6) {                                  // на складе может быть не более 6 единиц товара
+                try {
+                    wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            counter++;
+            System.out.println("Товар добавлен: " + name);
+            System.out.println("Товар " + name + " на складе: " + counter);
+            notifyAll();
+        }
+    }
+
 
 

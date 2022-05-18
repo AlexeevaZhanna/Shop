@@ -1,7 +1,7 @@
 package com.company.Products;
 
 
-public class Chicken extends Meat {
+public class Chicken extends Meat{
     private  String name;
     private  double size;
     private int price;
@@ -64,5 +64,4 @@ public class Chicken extends Meat {
     public void pack(int z) {
         System.out.println("Упаковать в пакет: " + name);
     }
-
 }
