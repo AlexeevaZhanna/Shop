@@ -38,7 +38,7 @@ public abstract class Product {
     public synchronized void get() {
         while (counter < 1) {
             System.out.println("Ожидается пополнение склада: " + name);
-            try {
+            try {Thread.sleep(30);
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -52,7 +52,7 @@ public abstract class Product {
 
         public synchronized void put () {
             while (counter >= 6) {                                  // на складе может быть не более 6 единиц товара
-                try {
+                try {Thread.sleep(5);
                     wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
