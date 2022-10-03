@@ -1,0 +1,5 @@
+
+name:Лиза age:22 number:1 sale:20 
+name:Иван age:25 number:2 sale:30 
+name:Петр age:30 number:3 sale:5
+name:Ольга age:19 number:4 sale:22
