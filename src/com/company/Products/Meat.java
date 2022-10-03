@@ -3,6 +3,8 @@ package com.company.Products;
 
 public class Meat extends Product  {
     private String name;
+
+
     public String getName() {
         return name;
     }

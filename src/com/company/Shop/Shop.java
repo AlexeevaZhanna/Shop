@@ -57,5 +57,6 @@ public  class Shop implements Cloneable {
         return this.nameShop.getName() + " (" + this.address.getAddress() + "," +" время работы: " + this.work + ")";
     }
 
-}
+    }
+
 
